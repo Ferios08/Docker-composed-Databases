@@ -1,0 +1,13 @@
+# To login to your database using psql cli,
+# Connect to the container bash using:
+docker exec -it <container-name> bash 
+# Then use this command:
+
+psql --host=postgres --username=<your_username> --dbname=<your-passowrd>
+
+# To create a new user and assign him/her a database:
+
+postgres=# CREATE USER your_username WITH PASSWORD 'your_password';
+postgres=# CREATE DATABASE your_database;
+postgres=# GRANT ALL PRIVILEGES ON DATABASE your_database to your_username;
+

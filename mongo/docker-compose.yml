@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  mongodb:
+    image: mongo
+    env_file:
+      - mongo.env # configure env vars in this file
+    ports:
+      - 27017:27017
+    volumes:
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - mongodb_data:/data/db # Persist data even if container shuts down
+
+volumes:
+  mongodb_data:
