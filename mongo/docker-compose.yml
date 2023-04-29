@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   mongodb:
-    image: mongo
+    image: mongo:5.0
     env_file:
       - mongo.env # configure env vars in this file
     ports:
