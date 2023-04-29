@@ -1,7 +1,7 @@
 version: '3'
 services:
   db:
-    image: mariadb:jammyu
+    image: mariadb:jammy
     container_name: db
     env_file:
       - mysql.env # configure env vars in this file
